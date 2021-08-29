@@ -157,14 +157,25 @@
 
 	])
 
-24.
+24. db.addresses.aggregate([  
+	{ $match:  
+		{ "address.coord.1": {$gt:42 , $lte:52} }
+	},
+	{$project: {name:1,restaurant_id:1,"address.coord":1}}
+
+	])
+
 25. db.addresses.aggregate([
 	{$sort:{name: -1}}
 	])
+
 26.db.addresses.aggregate([
 	{$sort:{name: 1}}
 	])
-27.
+
+27.db.addresses.aggregate([
+	{$sort:{cuisine: 1,borough:-1}}
+	])
 28.
 29.
 30.
