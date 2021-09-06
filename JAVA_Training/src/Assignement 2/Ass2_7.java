@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
-abstract class dessertItem{
+abstract class dessertItem{                                 //mainclass
     String itemName;
     double cost;
 
-    public abstract double getCost();
+    public abstract double getCost();                          //abstract method for cost
 
-    public dessertItem(String itemName,double cost){
+    public dessertItem(String itemName,double cost){            //constructor
         this.itemName=itemName;
         this.cost=cost;
     }
-    public void display(){
+    public void display(){                                         //method to display
         System.out.println(this.itemName+"  :  "+this.getCost());
 
     }
@@ -48,6 +48,7 @@ class IceCream extends dessertItem{
         return this.cost;
     }
 }
+/*-----------------------------------------------------------------------*/
 
 public class Ass2_7 {
 
@@ -66,7 +67,7 @@ public class Ass2_7 {
             System.out.println("______________________________________");
             System.out.println("|         CHOOSE AN USER             |");
             System.out.println("|------------------------------------|");
-            System.out.println("|1.Customer                          |");
+            System.out.println("|1.Customer                          |");       //User menu
             System.out.println("|2.OWNER                             |");
             System.out.println("|____________________________________|");
             System.out.println("Enter your choice: ");
