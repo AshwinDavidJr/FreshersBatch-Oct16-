@@ -29,6 +29,9 @@ class employee{
         set1.add((employee) object);
         System.out.println(set1);
     }
+    public String toString(){
+        return "Employee name:"+this.name;
+    }
 }
 public class Ass5_1 {
     public static void main(String[] args) {

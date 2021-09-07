@@ -1,29 +1,35 @@
 package Ass6;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.TreeMap;
+import java.util.*;
 
 class contact{
     long phnumber;
     String name;
     String email;
-    //enum gender;
+    enum gender{
+        male,female;
+    }
+    gender g1;
 
-    public contact(long phnumber, String name) {
+    public contact(long phnumber, String name, gender g1) {
         this.phnumber = phnumber;
         this.name = name;
+        this.g1 = g1;
     }
 
     public long getPhnumber() {
         return phnumber;
+    }
+
+    public String toString(){
+        return "Contact: " + this.name +" phone no: "+this.getPhnumber();
     }
 }
 public class Q1 {
 
     public static void main(String[] args) {
         long mnumber = 987660;
-        TreeMap<Long,contact> TreeMap1 = new TreeMap<>();
+        TreeMap<Long,contact> TreeMap1 = new TreeMap<>(Collections.reverseOrder());
         contact[] contacts=new contact[10];
         long j = 80;
        /* for (int i=0;i<10;i++)
@@ -33,10 +39,12 @@ public class Q1 {
             TreeMap1.put(j++,contacts[i]);
 
         }*/
-        TreeMap1.put(10L,new contact(987654321,"rahul"));
-        TreeMap1.put(20L,new contact(987637342,"tanay"));
+        TreeMap1.put(10L,new contact(987654321,"rahul", contact.gender.male));
+        TreeMap1.put(20L,new contact(987637342,"tanishka", contact.gender.female));
 
         System.out.println(TreeMap1.keySet());  //printing keys
+        /*for(contact c :TreeMap1.values())
+            System.out.println(c.name+" "+c.getPhnumber()+" "+c.g1);*/
         System.out.println(TreeMap1.values());  //printing values
         System.out.println(TreeMap1);  //printing both
 
@@ -55,8 +63,6 @@ public class Q1 {
              ) {
 
         }*/
-        contact refer = TreeMap1.get((long)10L);
-        System.out.println(refer.getPhnumber());
 
 
     }
