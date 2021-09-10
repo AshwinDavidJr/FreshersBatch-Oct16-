@@ -38,7 +38,7 @@ public class Ass5_1 {
 
         employee emp1 = new employee(101,"rahul","cse",20000);
         employee emp2 = new employee(102,"raul","cse",20090);
-        emp1.addtoHash(emp1);
+        emp1.addtoHash(emp1);               //adding values to hash
         emp2.addtoHash(emp2);
         //System.out.println(obj1.size());
     }

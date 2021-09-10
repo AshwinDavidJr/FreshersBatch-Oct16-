@@ -10,26 +10,20 @@ import java.util.Arrays;
 public class A10_q4 {
 
     public static void main(String[] args) throws IOException {
-        var path = "C:\\Users\\A117\\Downloads\\Java11Assignments_StudentList.txt";
+        var path = "C:\\Users\\A117\\Downloads\\Java11Assignments_StudentList.txt";     //local filepath
         try {
-            String names=Files.readString(Path.of(path));
-            //names.split("\\r?\\n");
-            ArrayList<String > namelist = new ArrayList<>(Arrays.asList(names));
+            String names=Files.readString(Path.of(path));                               //reading data of file into a string
+            String[] fnames= names.split("\\r?\\n");                               // spliting each names
+            ArrayList<String > namelist = new ArrayList<>(Arrays.asList(fnames));       //converting string into arraylist
 
+            /*for (String s:namelist
+                 ) {s=s.trim();
+
+            }*/
+            namelist.removeIf(p->p.length()==0);                                    //removing blank names
+           //namelist.forEach(p->p.replaceAll("\\s",""));
             System.out.println(namelist);
-
-            namelist.forEach(p->p.trim());
-
-            System.out.println("-----------------------------");
-            System.out.println(namelist.get(1));
-
-            /*for (String s:names1
-                 ) {
-                s.replace("\s+","");
-
-            }
-*/
-            //System.out.println(str2[3]);
+            System.out.println("no of names:"+(namelist.size()));                   //printing total no of names in the file
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -1,6 +1,6 @@
 package Assignment5;
 
-class pair<K,V>{
+class pair<K,V>{                    //generic class
     K key;
     V value;
 
@@ -24,7 +24,7 @@ class pair<K,V>{
 public class Ass5_4 {
 
     public static void main(String[] args) {
-        pair<String,String > obj1=new pair<>();
+        pair<String,String > obj1=new pair<>();                     //declaring generic class object
         pair<String,java.util.Date > obj2=new pair<>();
 
         obj1.setKey("key1");

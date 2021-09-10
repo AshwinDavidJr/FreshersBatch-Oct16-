@@ -18,7 +18,7 @@ public class A10_q1 {
 
         Si obj1 = new Si(123000,5.2,10);
 
-        Consumer<Si> calculate = p->{
+        Consumer<Si> calculate = p->{           //consumer interface for calculating simple intrest
             var tamt=p.time*p.princple* p.rate;
             tamt/=100;
             System.out.println(tamt);};

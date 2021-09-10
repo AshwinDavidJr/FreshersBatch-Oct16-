@@ -12,7 +12,7 @@ public class Assg1_4 {
         System.out.println("enter the mark of third subject: ");
         m3 = in.nextInt();
 
-        if(m1>60&&m2>60&&m3>60)
+        if(m1>60&&m2>60&&m3>60)                                 //checking conditions as given
             System.out.println("PASSED");
         else if((m1>60&&m2>60)||(m1>60&&m3>60)||(m2>60&&m3>60))
             System.out.println("PROMOTED");

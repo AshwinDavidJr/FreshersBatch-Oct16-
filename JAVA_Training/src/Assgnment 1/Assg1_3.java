@@ -15,7 +15,7 @@ public class Assg1_3 {
         System.out.println("enter the time period:");
         t = in.nextInt();
         System.out.println("simple intrest: " +(p*r*t));
-        double ci = (p*(Math.pow(1+r,t)))-p;
+        double ci = (p*(Math.pow(1+r,t)))-p;                //calculating simple intrest
         System.out.println("Compound intrest: " + ci);
     }
 }

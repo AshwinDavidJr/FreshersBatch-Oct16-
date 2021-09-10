@@ -23,14 +23,14 @@ public class Assg1_6 {
             pass= in.next();
 
             for (int i = 0; i < cred.length; i++)
-                if (uname.equals(cred[i][0]) && pass.equals(cred[i][1])) {
+                if (uname.equals(cred[i][0]) && pass.equals(cred[i][1])) {          //authenticating credetnials
                     System.out.println("welcome " + cred[i][0]);
                     System.exit(0);
                 }
                 else {
                     flag=false;
                 }
-                if (!flag){
+                if (!flag){                     //snippet to show no of chances left
                 System.out.println("Invalid Credentials! No of attempts left: " + (3 - c - 1));
                 c++;
             }

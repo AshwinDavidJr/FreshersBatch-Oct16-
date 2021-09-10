@@ -8,7 +8,7 @@ public class Assg1_5 {
         System.out.println("enter your salary: ");
         long sal = in.nextInt();
         double total_sal = sal;
-        if (sal>=0&&sal<=180000) {
+        if (sal>=0&&sal<=180000) {                                             //checking each conditions
             System.out.println("tax percentage: nil");
             total_sal=sal;
         }

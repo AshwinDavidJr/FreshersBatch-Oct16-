@@ -13,7 +13,7 @@ public class Assg1_8 {
         {
             System.out.println(arr[i]);
         }
-        while(n!=0){
+        while(n!=0){                    //bubble sort algo
             for (int i =0;i<n-1;i++)
             {
                 if(arr[i]>arr[i+1])
