@@ -10,6 +10,7 @@ class result{                       //updation for question2
 
     public result(int min, int max) {
         this.min = min;
+
         this.max = max;
     }
 }
