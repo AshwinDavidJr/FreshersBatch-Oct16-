@@ -1,0 +1,28 @@
+.thumbnail {background-color: #eee;
+}
+body {margin-top: 33px;}
+.thumbnail .caption {background-color: #ddd;}
+
+.text-center{
+    text-align: center;
+
+}
+
+footer {
+	width: 100%;
+}
+
+.copyright {
+	background: #116677;
+}
+
+.copyright .ft-devlp {
+	color: #fff;
+	font-size: 1em;
+	margin: 7px 0px 10px;
+}
+
+.copyright p.ft-devlp {
+	color: #fff;
+	text-align: center;
+}
