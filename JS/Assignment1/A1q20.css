@@ -1,0 +1,29 @@
+.main{
+   
+    padding: 80;
+}
+
+.section1{
+    background-color: aliceblue;
+    height:fit-content;
+    width: 50%;
+    
+}
+.section1 #help{
+    position: absolute;
+    top: 20;
+    right:20;
+    font-weight: bolder;
+
+}
+.section2{
+    padding-top: 20px;
+    background-color: aliceblue;
+    width: 50%;
+}
+
+.section3{
+    padding-top: 20px;
+    background-color: aliceblue;
+    width: 50%;
+}
