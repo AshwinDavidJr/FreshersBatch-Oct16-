@@ -1,0 +1,36 @@
+<html>
+
+<head>
+<script>
+
+function convert(){
+document.getElementById("rs").value=document.getElementById("currency").value*74;
+document.getElementById("yen").value=document.getElementById("currency").value*109.14;
+document.getElementById("euro").value=document.getElementById("currency").value*.84;
+document.getElementById("pound").value=document.getElementById("currency").value*.72;
+}
+</script>
+</head>
+<body>
+    
+
+    <div>
+        <label for="currency">Enter the amount($) to be converted: </label>
+        <input type="text" id="currency" name="currency">
+        <button onclick="convert()">convert</button>
+    </div>
+    <div id ="Answers">
+        <label for="currency">Indian Ruppes: </label>
+        <input type="text" id="rs" name="currency" readonly><br>
+        <label for="currency">Japanese yen: </label>
+        <input type="text" id="yen" name="currency" readonly><br>
+        <label for="currency">Euros: </label>
+        <input type="text" id="euro" name="currency" readonly><br>
+        <label for="currency">Pounds: </label>
+        <input type="text" id="pound" name="currency" readonly>
+
+
+    </div>
+</body>
+
+</html>
