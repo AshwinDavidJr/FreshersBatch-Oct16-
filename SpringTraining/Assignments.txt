@@ -1,0 +1,58 @@
+Spring – ApplicationContext:
+-----------------------------------
+Spring IoC container is responsible for instantiating, wiring, configuring, and managing the entire life cycle of objects.
+BeanFactory and ApplicationContext represent the Spring IoC Containers. ApplicationContext is the sub-interface of BeanFactory. BeanFactory provides basic functionalities and is recommended to use for lightweight applications like mobile and applets. ApplicationContext provides basic features in addition to enterprise-specific functionalities which are as follows:
+
+Publishing events to registered listeners by resolving property files.
+Methods for accessing application components.
+Supports Internationalization.
+Loading File resources in a generic fashion.
+
+Bean Factory vs ApplicationCOntext
+------------------------------------
+BeanFactory loads beans on-demand, while ApplicationContext loads all beans at startup.
+Thus, BeanFactory is lightweight as compared to ApplicationContext.
+
+
+ApplicationContextAware
+--------------------------------------
+Interface to be implemented by any object that wishes to be notified of the ApplicationContext that it runs in.
+Implementing this interface makes sense for example when an object requires access to a set of collaborating beans.
+Note that configuration via bean references is preferable to implementing this interface just for bean lookup purposes.
+
+Annotations
+-----------------------------------------
+@Bean
+The @Bean annotations are used at the method level and indicate that a method produces a bean that is to be managed by Spring container.
+It is an alternative to the XML<bean> tag.
+
+
+@Service
+It is used at the class level. It shows that the annotated class is a service class, such as business basic logic, and call external APIs.
+
+@Repository
+It is a Data Access Object (DAO) that accesses the database directly.
+It indicates that the annotated class is a repository.
+
+@Configuration
+It is used as a source of bean definitions. It is a class-level annotation.
+
+@Controller
+The annotation is used to indicate that the class is a web request handler.
+It is often used to present web pages. It is most commonly used with @RequestMapping annotation.
+
+@Autowired
+This annotation is used to auto-wire spring bean on setter methods, constructor and instance variable.
+It injects object dependency implicitly.
+When we use this annotation, the spring container auto-wires the bean by its matching data type.
+
+@Component
+It is a class-level annotation that turns the class into Spring bean at the auto-scan time.
+
+@value
+This annotation can be used for injecting values into fields in Spring-managed beans,
+and it can be applied at the field or constructor/method parameter level.
+
+@PropertySource
+Spring @PropertySource annotation is used to provide properties file to Spring Environment.
+This annotation is used with @Configuration classes. Spring PropertySource annotation is repeatable, means you can have multiple PropertySource on a Configuration class

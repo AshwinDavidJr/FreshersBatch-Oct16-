@@ -45,5 +45,22 @@
 
 
     </bean>
+    <!--__________________________Question 3 beans___________________________________-->
+    <bean id="BankAccController1" class="Quest3BankAccount.BankAccountController" >
+        <!--<property name="accounts" ref="Accounts"></property>-->
+        <property name="accounts" ref="account1"></property>
+    </bean>
+    <bean id="BankAccController2" class="Quest3BankAccount.BankAccountController">
+        <property name="accounts" ref="account2"></property>
+    </bean>
+
+    <bean id="account1" class="Quest3BankAccount.BankAccount">
+    </bean>
+    <bean id="account2" class="Quest3BankAccount.BankAccount"/>
+
+    <bean id="BankAccRepo" class="Quest3BankAccount.BankAccountRepoImp">
+
+        <!--<property name="accounts" ref="Accounts"></property>-->
+    </bean>
 
 </beans>
