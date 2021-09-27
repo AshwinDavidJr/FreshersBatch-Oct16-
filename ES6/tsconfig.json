@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "eS5",
+        "module": "commonjs",
+        "sourceMap": true,
+        "outDir": "scripts"
+
+    }
+}
