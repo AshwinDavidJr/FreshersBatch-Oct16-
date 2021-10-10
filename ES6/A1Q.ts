@@ -23,7 +23,7 @@ function checkscope(){                                  //question2
                                                 
 }
 
-var arrow = (...names)=>{                                           //question4
+var arrow = (...names: string[])=>{                                           //question4
 
     document.write(" <br> <h3> <b> Questiion 4 : check console...!!</b></h3>")
     let output = [];
@@ -45,7 +45,7 @@ var arrow = (...names)=>{                                           //question4
 var add=(a=2,b=3)=>a+b;                                 //question 5.a
 
 
-var userfriends=(username,...friends)=>{                //question 5.b
+var userfriends=(username: string,...friends: string[])=>{                //question 5.b
     document.write("<br><b>Question 5.b</b> <br><br>user : "+username+"<br> Friends: <br>");
     for(let i in friends)
     
@@ -55,19 +55,12 @@ var userfriends=(username,...friends)=>{                //question 5.b
     }    
     
     
-var printCapitalNames=(...names)=>{                         //question 5.c
+var printCapitalNames=(...names: string[])=>{                         //question 5.c
 for(let i in names)
 document.write(names[i].toUpperCase()+"<br>");
 }
 
-
-var arrayMatching = ()=>{                               //question 7.a
-    let arr = ["elm1","elm2","elm3","elm4"];
-    let [e1,e2,e3,e4] = arr;
-    document.write("3rd element is : "+e3);
-}
-
-var raiseTicket =()=>{
+var raiseTicket =()=>{                          //question 6
 
     let lapModel = "Ideapad 320";
     let deskNo = 39;
@@ -82,6 +75,53 @@ var raiseTicket =()=>{
     ${uName}
     `)
 }
+
+var arrayMatching = ()=>{                               //question 7.a
+    let arr = ["elm1","elm2","elm3","elm4"];
+    let [e1,e2,e3,e4] = arr;
+    document.write("3rd element is : "+e3);
+}
+
+
+function classexample1(){
+
+    class Account{
+        id: any;
+        name: any;
+        balance: any;
+        constructor(id: any,name: any,balance: any){
+            this.id = id;
+            this.balance = balance;
+            this.name=name;
+        }
+    }
+
+    class SavingAccount extends Account {
+        private intrest=.02;
+            constructor(id: any,name:any,balance:any) {
+                super(id,name,balance);
+                this.balance = this.balance+(this.balance*this.intrest);
+            }
+        }
+    class CurrentAccount extends Account {
+        cash_credit = 1000;
+        constructor(id: any,name:any,balance:any) {
+            super(id, name, balance);
+            this.balance+=this.cash_credit;
+      }
+    }
+
+    let acc1 = new SavingAccount(1001,"Holder1",10000);
+    let acc2 = new CurrentAccount(1002,"Holder2",15000);
+
+    let sum = 0;
+    sum=acc1.balance+acc2.balance;
+    console.log(sum);
+    document.write(`sum of all account's balances are: ${sum}`);
+
+    }
+
+
 
 //-------------------------------------------------------------------------------------------------------------------
 
@@ -99,7 +139,7 @@ document.write("<br><b> Question 5.a </b> <br> This addition works with default 
 
 console.log(add());        //q5.a call
 
-userfriends("Rahul",["keerthi","sravan","beck","ben"]);     //q5.b call
+userfriends("Rahul",...["keerthi","sravan","beck","ben"]);     //q5.b call
 
 let names=["name1","name2","name3"];
 document.write("<br><br><b> Question 5.c </b> <br> names using spread..........<br>");
@@ -116,4 +156,5 @@ document.write("<br><br><b> Question 7.a </b> <br> De-structuring done by array 
 arrayMatching();                                                //q7.a call
 
 
-
+document.write("<br><br><b> Question 8 </b> <br> check console to see total amount in accounts....!<br>");
+classexample1();                                                        //q8 call

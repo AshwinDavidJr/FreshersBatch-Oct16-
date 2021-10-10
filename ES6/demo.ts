@@ -5,4 +5,6 @@ function demo()
     document.write(a);
 }
 
+
+
 demo();
